@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		CCA966F3283932B90024616F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA966F2283932B90024616F /* AppDelegate.swift */; };
 		CCA966F5283932B90024616F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA966F4283932B90024616F /* SceneDelegate.swift */; };
-		CCA966F7283932B90024616F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA966F6283932B90024616F /* ViewController.swift */; };
-		CCA966FA283932B90024616F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA966F8283932B90024616F /* Main.storyboard */; };
+		CCA966F7283932B90024616F /* MainMenuTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA966F6283932B90024616F /* MainMenuTabBarViewController.swift */; };
 		CCA966FC283932BC0024616F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA966FB283932BC0024616F /* Assets.xcassets */; };
 		CCA966FF283932BC0024616F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA966FD283932BC0024616F /* LaunchScreen.storyboard */; };
 		CCA9670A283932BC0024616F /* MenuTabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA96709283932BC0024616F /* MenuTabBarTests.swift */; };
 		CCA96714283932BD0024616F /* MenuTabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA96713283932BD0024616F /* MenuTabBarUITests.swift */; };
 		CCA96716283932BD0024616F /* MenuTabBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA96715283932BD0024616F /* MenuTabBarUITestsLaunchTests.swift */; };
+		CCA96725283979E30024616F /* MenuTabBarDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA96724283979E30024616F /* MenuTabBarDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,7 @@
 		CCA966EF283932B90024616F /* MenuTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA966F2283932B90024616F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCA966F4283932B90024616F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCA966F6283932B90024616F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCA966F9283932B90024616F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCA966F6283932B90024616F /* MainMenuTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTabBarViewController.swift; sourceTree = "<group>"; };
 		CCA966FB283932BC0024616F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCA966FE283932BC0024616F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCA96700283932BC0024616F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		CCA9670F283932BD0024616F /* MenuTabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuTabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA96713283932BD0024616F /* MenuTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarUITests.swift; sourceTree = "<group>"; };
 		CCA96715283932BD0024616F /* MenuTabBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CCA96724283979E30024616F /* MenuTabBarDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,9 @@
 		CCA966F1283932B90024616F /* MenuTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CCA967222839752B0024616F /* Menu */,
 				CCA966F2283932B90024616F /* AppDelegate.swift */,
 				CCA966F4283932B90024616F /* SceneDelegate.swift */,
-				CCA966F6283932B90024616F /* ViewController.swift */,
-				CCA966F8283932B90024616F /* Main.storyboard */,
 				CCA966FB283932BC0024616F /* Assets.xcassets */,
 				CCA966FD283932BC0024616F /* LaunchScreen.storyboard */,
 				CCA96700283932BC0024616F /* Info.plist */,
@@ -125,6 +124,23 @@
 				CCA96715283932BD0024616F /* MenuTabBarUITestsLaunchTests.swift */,
 			);
 			path = MenuTabBarUITests;
+			sourceTree = "<group>";
+		};
+		CCA967222839752B0024616F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CCA96723283975430024616F /* MainMenu */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CCA96723283975430024616F /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CCA966F6283932B90024616F /* MainMenuTabBarViewController.swift */,
+				CCA96724283979E30024616F /* MenuTabBarDTO.swift */,
+			);
+			path = MainMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +249,6 @@
 			files = (
 				CCA966FF283932BC0024616F /* LaunchScreen.storyboard in Resources */,
 				CCA966FC283932BC0024616F /* Assets.xcassets in Resources */,
-				CCA966FA283932B90024616F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCA966F7283932B90024616F /* ViewController.swift in Sources */,
+				CCA966F7283932B90024616F /* MainMenuTabBarViewController.swift in Sources */,
 				CCA966F3283932B90024616F /* AppDelegate.swift in Sources */,
+				CCA96725283979E30024616F /* MenuTabBarDTO.swift in Sources */,
 				CCA966F5283932B90024616F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CCA966F8283932B90024616F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCA966F9283932B90024616F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CCA966FD283932BC0024616F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +450,6 @@
 				INFOPLIST_FILE = MenuTabBar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +477,6 @@
 				INFOPLIST_FILE = MenuTabBar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
